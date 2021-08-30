@@ -1,5 +1,5 @@
 FROM debian:stretch
-MAINTAINER Camptocamp
+MAINTAINER Fortizar
 
 # create the working directory and a place to set the logs (if wanted)
 RUN mkdir -p /odoo /var/log/odoo
