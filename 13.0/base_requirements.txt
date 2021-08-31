@@ -20,7 +20,7 @@ passlib==1.7.2
 Pillow==6.2.2
 polib==1.1.0
 psutil==5.7.0; sys_platform != 'win32'
-pyscopg2-binary==2.9.1; sys_platform != 'win32'
+psycopg2-binary==2.9.1; sys_platform != 'win32'
 pydot==1.4.1
 python-ldap==3.2.0; sys_platform != 'win32'
 pyparsing==2.2.0
