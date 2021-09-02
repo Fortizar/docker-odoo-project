@@ -45,3 +45,6 @@ suds-jurko==0.6
 tzlocal==1.5.1
 Unidecode==1.0.22
 yarl==1.2.6
+
+# Debugger dependencies
+debugpy~=1.4
