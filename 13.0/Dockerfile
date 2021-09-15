@@ -37,7 +37,7 @@ RUN set -x; \
         && /install/postgres.sh \
         && /install/wkhtml_12_5_1.sh \
         && /install/dev_package.sh \
-        && python3 -m pip install --force-reinstall pip setuptools \
+        && python3 -m pip install --force-reinstall pip setuptools==57.5.0 \
         && pip install -r /odoo/base_requirements.txt --ignore-installed \
         && /install/purge_dev_package_and_cache.sh
 
