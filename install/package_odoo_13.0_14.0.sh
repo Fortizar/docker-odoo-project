@@ -24,4 +24,8 @@ apt-get install -y --no-install-recommends \
     xfonts-75dpi \
     xfonts-base \
     xz-utils \
-    tcl expect
+    tcl \
+    expect \
+    wget \
+    git \
+    vim

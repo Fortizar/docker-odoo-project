@@ -26,8 +26,7 @@ ENV BUILD_PACKAGE \
     libssl-dev \
     libjpeg-dev \
     libpng-dev \
-    zlib1g-dev \
-    git
+    zlib1g-dev
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
