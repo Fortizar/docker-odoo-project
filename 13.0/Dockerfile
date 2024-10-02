@@ -1,5 +1,5 @@
-FROM debian:buster
-MAINTAINER Fortizar
+FROM debian:bullseye
+LABEL maintainer=Fortizar
 
 # create the working directory and a place to set the logs (if wanted)
 RUN mkdir -p /odoo /var/log/odoo
@@ -16,7 +16,12 @@ ENV LANG=C.UTF-8 \
 ENV BUILD_PACKAGE \
     build-essential \
     gcc \
-    python3.7-dev \
+    python3-dev \
+    vim \
+    wget \
+    git \
+    libfbclient2 \
+    postgresql-14 \
     libevent-dev \
     libfreetype6-dev \
     libxml2-dev \
@@ -30,8 +35,7 @@ ENV BUILD_PACKAGE \
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
-        sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main" > /etc/apt/sources.list.d/pgdg.list' \
-        && sh -c /install/package_odoo_13.0_14.0.sh \
+        sh -c /install/package_odoo_13.0_14.0.sh \
         && /install/setup-pip.sh \
         && /install/postgres.sh \
         && /install/wkhtml_12_5_1.sh \
